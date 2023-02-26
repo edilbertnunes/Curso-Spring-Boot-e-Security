@@ -1,9 +1,17 @@
 package tech.edilbert.springdesk.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import tech.edilbert.springdesk.Enums.Perfil;
 
+@Entity
 public abstract class Pessoa {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     private String email;
@@ -11,9 +19,7 @@ public abstract class Pessoa {
     private String imagem;
     private Perfil perfil;
 
-    public Pessoa() {
-
-    }
+    public Pessoa() {}
 
     public Pessoa(Integer id, String nome, String email, String senha, String imagem, Perfil perfil) {
         this.id = id;
