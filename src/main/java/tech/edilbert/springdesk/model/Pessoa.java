@@ -1,13 +1,13 @@
 package tech.edilbert.springdesk.model;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
 import tech.edilbert.springdesk.Enums.Perfil;
 
-@Entity
+@MappedSuperclass
 public abstract class Pessoa {
 
     @Id
