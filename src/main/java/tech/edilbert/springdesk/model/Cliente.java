@@ -11,7 +11,7 @@ import tech.edilbert.springdesk.Enums.Perfil;
 @Entity
 public class Cliente extends Pessoa {
 
-    @OneToMany
+    @OneToMany(mappedBy = "cliente")
     private List<Chamado> chamados = new ArrayList<>();
 
 
